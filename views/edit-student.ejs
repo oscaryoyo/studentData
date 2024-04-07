@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>修改學生資料</title>
+  </head>
+  <body>
+    <form action="/students/<%= eachStudent._id %>?_method=PUT" method="POST">
+      <label for="name">姓名</label>
+      <input type="text" name="name" value="<%=eachStudent.name%>" />
+      <label for="age">年齡</label>
+      <input type="number" name="age" value="<%=eachStudent.age%>" />
+      <label for="merit">獎學金</label>
+      <input
+        type="number"
+        name="merit"
+        value="<%=eachStudent.scholarship.merit%>"
+      />
+      <label for="other">學金</label>
+      <input
+        type="number"
+        name="other"
+        value="<%=eachStudent.scholarship.other%>"
+      />
+      <button>更新學生</button>
+    </form>
+  </body>
+</html>

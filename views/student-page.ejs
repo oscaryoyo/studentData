@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= eachStudent.name %>的葉面</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      action="/students/<%= eachStudent._id %>?_method=DELETE"
+      method="post"
+    >
+      <table>
+        <tr>
+          <td>學生id</td>
+          <td><%= eachStudent.id %></td>
+        </tr>
+        <tr>
+          <td>學生name</td>
+          <td><%= eachStudent.name %></td>
+        </tr>
+
+        <tr>
+          <td>學生age</td>
+          <td><%= eachStudent.age %></td>
+        </tr>
+        <tr>
+          <td>學生merit</td>
+          <td><%= eachStudent.scholarship.merit %></td>
+        </tr>
+        <tr>
+          <td>學生other</td>
+          <td><%= eachStudent.scholarship.other %></td>
+        </tr>
+      </table>
+      <a href="/students">回到首頁</a>
+      <a href="/students/<%= eachStudent._id%>/edit">更新資料</a>
+      <button>刪除學生</button>
+    </form>
+  </body>
+</html>

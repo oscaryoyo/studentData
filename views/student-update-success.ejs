@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>成功更新學生!!</h1>
+    <table>
+      <tr>
+        <td>學生id</td>
+        <td><%= newData.id %></td>
+      </tr>
+      <tr>
+        <td>學生name</td>
+        <td><%= newData.name %></td>
+      </tr>
+      <tr>
+        <td>學生age</td>
+        <td><%= newData.age %></td>
+      </tr>
+      <tr>
+        <td>學生merit</td>
+        <td><%= newData.scholarship.merit %></td>
+      </tr>
+      <tr>
+        <td>學生other</td>
+        <td><%= newData.scholarship.other %></td>
+      </tr>
+    </table>
+    <a href="/students">回到首頁</a>
+  </body>
+</html>
